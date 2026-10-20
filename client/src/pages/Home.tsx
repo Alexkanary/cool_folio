@@ -7,7 +7,7 @@ import { projects } from "@/lib/projects";
 const sceneImage = "/manus-storage/async-images/X9GM8StSJdVKEge4C3uzKT/image-1.webp";
 
 function BrandMark() {
-  return <span className="brand-mark" aria-hidden="true"><span>A</span><span>K</span><i /></span>;
+  return <span className="brand-mark" aria-hidden="true"><img src="/favicon-192.png" alt="" /></span>;
 }
 
 function SiteNav({ activeSection }: { activeSection: string }) {
@@ -19,7 +19,7 @@ function SiteNav({ activeSection }: { activeSection: string }) {
   ];
   return (
     <header className="site-nav">
-      <a href="/" className="nav-brand" aria-label="Folio by Alex K. — home"><BrandMark /><span><b>FOLIO</b><small>ALEX K. / CREATIVE PRACTICE</small></span></a>
+      <a href="/" className="nav-brand" aria-label="SAI DAR — home"><BrandMark /><span><b>SAI DAR</b><small>CREATIVE PRACTICE</small></span></a>
       <button className="mobile-menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen}>
         {menuOpen ? <X size={18} /> : <Menu size={18} />}
       </button>
@@ -61,7 +61,8 @@ export default function Home() {
       return;
     }
     if (!introVisible) return;
-    const timer = window.setTimeout(finishIntro, 1900);
+    // 5900ms total: 900ms for welcome slide-up + 5000ms of full intro visibility
+    const timer = window.setTimeout(finishIntro, 5900);
     return () => window.clearTimeout(timer);
   }, [introVisible, reduceMotion]);
 
@@ -96,9 +97,9 @@ export default function Home() {
           <div className="scene-image" aria-hidden="true"><img src={sceneImage} alt="" fetchPriority="high" /></div>
           <div className="scene-shade" aria-hidden="true" />
           <div className="scene-grain" aria-hidden="true" />
-          <div className="scene-topline"><span>FOLIO / PERSONAL ARCHIVE</span><span>INDEPENDENT · 2026</span></div>
+          <div className="scene-topline"><span>SAI DAR / PERSONAL ARCHIVE</span><span>INDEPENDENT · 2026</span></div>
           <div className="hero-copy">
-            <p className="hero-kicker"><i /> ALEX K. — DESIGNER & CREATIVE DEVELOPER</p>
+            <p className="hero-kicker"><i /> SAI DAR — DESIGNER & CREATIVE DEVELOPER</p>
             <h1>Ideas made<br />to <em>move</em> you.</h1>
             <p className="hero-description">A practice in identity, digital worlds and the details that make them feel alive.</p>
             <a className="hero-cta" href="#projects"><span>EXPLORE SELECTED WORK</span><ArrowDownRight size={15} /></a>
@@ -140,7 +141,7 @@ export default function Home() {
           <div className="section-label"><span>02 / STUDIO NOTES</span><span>HOW I LIKE TO WORK</span></div>
           <div className="studio-layout">
             <Reveal className="studio-title"><p className="studio-kicker">GOOD WORK STARTS WITH GOOD QUESTIONS.</p><h2>Make the<br />invisible <em>felt.</em></h2></Reveal>
-            <Reveal className="studio-copy" delay={0.1}><p className="studio-lead">I’m Alex — an independent creative working across visual identity, digital experiences and the moments that connect them.</p><p>Curiosity is the starting point. I bring a designer’s eye and a maker’s instinct to the whole process — shaping a clear idea, building a world around it, and sweating the small details that make it memorable.</p><p>I work with thoughtful people who want to make something with a point of view. From a first sketch to the final motion detail, I like staying close to the work.</p><a href="#contact" className="studio-link">A LITTLE MORE ABOUT THE PROCESS <ArrowUpRight size={14} /></a></Reveal>
+            <Reveal className="studio-copy" delay={0.1}><p className="studio-lead">I’m Sai Dar — an independent creative working across visual identity, digital experiences and the moments that connect them.</p><p>Curiosity is the starting point. I bring a designer’s eye and a maker’s instinct to the whole process — shaping a clear idea, building a world around it, and sweating the small details that make it memorable.</p><p>I work with thoughtful people who want to make something with a point of view. From a first sketch to the final motion detail, I like staying close to the work.</p><a href="#contact" className="studio-link">A LITTLE MORE ABOUT THE PROCESS <ArrowUpRight size={14} /></a></Reveal>
           </div>
           <div className="services-line"><span>THINGS I CAN HELP WITH</span><div><i>Creative direction</i><i>Visual identity</i><i>Digital experiences</i><i>Art direction</i><i>Motion & interaction</i></div></div>
         </section>
@@ -150,7 +151,7 @@ export default function Home() {
           <Reveal className="contact-layout"><div className="contact-copy"><p className="contact-kicker"><i /> CURRENTLY OPEN TO A GOOD QUESTION</p><h2>Have an idea<br />with a <em>pulse?</em></h2><p>Tell me what you're thinking. The half-formed idea is usually the fun part.</p><a className="contact-button" href="mailto:hello@alexkanary.studio">LET'S START A CONVERSATION <ArrowUpRight size={17} /></a></div><div className="contact-aside"><span>ELSEWHERE, TOO</span><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">INSTAGRAM <ArrowUpRight size={14} /></a><a href="https://www.are.na/" target="_blank" rel="noreferrer">ARE.NA <ArrowUpRight size={14} /></a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN <ArrowUpRight size={14} /></a><p>HELLO@ALEXKANARY.STUDIO</p></div></Reveal>
         </section>
       </main>
-      <footer className="site-footer"><a href="#home" className="footer-brand"><BrandMark /><span>FOLIO<br />ALEX K.</span></a><span className="footer-copy">© 2026 ALEX K. · MADE WITH INTENTION</span><a className="back-top" href="#home">BACK TO THE SURFACE <ArrowUpRight size={13} /></a></footer>
+      <footer className="site-footer"><a href="#home" className="footer-brand"><BrandMark /><span>SAI DAR</span></a><span className="footer-copy">© 2026 SAI DAR · MADE WITH INTENTION</span><a className="back-top" href="#home">BACK TO THE SURFACE <ArrowUpRight size={13} /></a></footer>
     </div>
   );
 }

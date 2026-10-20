@@ -5,7 +5,7 @@ import { findProject, projects } from "@/lib/projects";
 import NotFound from "@/pages/NotFound";
 
 function Mark() {
-  return <span className="brand-mark" aria-hidden="true"><span>A</span><span>K</span><i /></span>;
+  return <span className="brand-mark" aria-hidden="true"><img src="/favicon-192.png" alt="" /></span>;
 }
 
 export default function CaseStudy() {
@@ -19,7 +19,7 @@ export default function CaseStudy() {
   return (
     <div className="case-shell">
       <a className="skip-to-content" href="#case-main">Skip to content</a>
-      <header className="case-nav"><a href="/" className="case-brand" aria-label="Folio by Alex K. — home"><Mark /><span><b>FOLIO</b><small>ALEX K. / CREATIVE PRACTICE</small></span></a><a href="/#projects" className="back-work"><ArrowLeft size={14} /> PROJECTS</a><a href="/#contact" className="case-contact">CONTACT <ArrowUpRight size={14} /></a></header>
+      <header className="case-nav"><a href="/" className="case-brand" aria-label="SAI DAR — home"><Mark /><span><b>SAI DAR</b><small>CREATIVE PRACTICE</small></span></a><a href="/#projects" className="back-work"><ArrowLeft size={14} /> PROJECTS</a><a href="/#contact" className="case-contact">CONTACT <ArrowUpRight size={14} /></a></header>
       <main id="case-main" className="case-main">
         <motion.section className="case-intro" initial={reduceMotion ? false : { opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: reduceMotion ? 0 : 0.7 }}>
           <div className="case-overline"><span>PROJECT {project.number} / 03</span><span>{project.year} · {project.discipline}</span></div>
@@ -37,7 +37,7 @@ export default function CaseStudy() {
         <section className="case-outcome"><span>THE RESULT</span><p>{project.outcome}</p><span>MADE WITH INTENTION, ALWAYS.</span></section>
         <a className="next-project" href={`/work/${next.slug}`}><span>NEXT PROJECT&nbsp; / &nbsp;{next.number}</span><span className="next-project-title">{next.title} <ArrowRight size={22} /></span><small>{next.subtitle}</small></a>
       </main>
-      <footer className="site-footer case-footer"><a href="/" className="footer-brand"><Mark /><span>FOLIO<br />ALEX K.</span></a><span className="footer-copy">© 2026 ALEX K.</span><a className="back-top" href="/#projects">ALL PROJECTS <ArrowUpRight size={13} /></a></footer>
+      <footer className="site-footer case-footer"><a href="/" className="footer-brand"><Mark /><span>SAI DAR</span></a><span className="footer-copy">© 2026 SAI DAR</span><a className="back-top" href="/#projects">ALL PROJECTS <ArrowUpRight size={13} /></a></footer>
     </div>
   );
 }
