@@ -129,7 +129,7 @@ export default function Home() {
                   <span className="project-discipline">{project.discipline}</span>
                   <span className="project-year">{project.year}</span>
                   <span className="project-arrow"><ArrowUpRight size={18} /></span>
-                  <span className="project-preview"><img src={project.cover} alt="" loading="lazy" /></span>
+                  {project.slug !== "slow-form" && <span className="project-preview"><img src={project.cover} alt="" loading="lazy" /></span>}
                 </a>
               </Reveal>
             ))}
