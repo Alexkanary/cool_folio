@@ -33,7 +33,7 @@ function App() {
     const imgHero = new Image();
     imgHero.src = "/manus-storage/async-images/X9GM8StSJdVKEge4C3uzKT/image-1.webp";
     const imgProj1 = new Image();
-    imgProj1.src = "/images/image-1.webp";
+    imgProj1.src = "/images/image-1.jpg";
     const imgProj2 = new Image();
     imgProj2.src = "/manus-storage/async-images/g7V58voJE1n5czprifrmCS/image-2.webp";
     const imgProj3 = new Image();

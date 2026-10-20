@@ -24,7 +24,7 @@ export const projects: Project[] = [
     year: "2026",
     discipline: "Identity · Campaign · Digital",
     role: "Art direction, identity, digital",
-    cover: "/images/image-1.webp",
+    cover: "/images/image-1.jpg",
     alt: "An unbranded amber glass vessel lit by a ribbon of warm orange light against a dark background",
     summary: "Building a whole world around the quiet ritual of scent.",
     overview: "A self-initiated world for an imagined independent fragrance house. The challenge was to make a familiar luxury category feel quieter, more tactile, and less polished for polish’s sake.",
