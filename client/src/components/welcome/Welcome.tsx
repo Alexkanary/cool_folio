@@ -320,7 +320,7 @@ export default function Welcome({ onContinue }: { onContinue: (withMusic: boolea
 
       <div className={styles.bottomBar}>
         <span>MOVE CURSOR TO REVEAL</span>
-        <span>SELECT AN OPTION</span>
+        <span>MY JOURNEY | MY PORTFOLIO</span>
       </div>
     </motion.div>
   );
